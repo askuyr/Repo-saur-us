@@ -935,7 +935,7 @@ footer{border-top:1px solid rgba(241,218,191,.12)}
 @keyframes tickerGlow{50%{letter-spacing:.12em}}
 </style>
 </head>
-<body><nav style="position:fixed;top:20px;right:20px;z-index:99;display:flex;gap:12px"><a href="landing.html">Лендинг</a><a href="brandbook.html">Брендбук</a></nav>
+<body>
 <div class="page-progress" aria-hidden="true"><div class="page-progress__bar" id="pageProgressBar"></div></div>
 <div class="brand-motion-bg" aria-hidden="true">
   <div class="brand-rays">
@@ -950,7 +950,7 @@ footer{border-top:1px solid rgba(241,218,191,.12)}
 <nav aria-label="Основная навигация" class="nav-links">
 <a href="#identity">Айдентика</a><a href="#palette">Палитра</a><a href="#type">Шрифты</a><a href="#merch">Мерч</a>
 <a href="#contacts">Контакты</a></nav>
-<a class="nav-cta" href="brandbook.html">Брендбук</a>
+<a class="nav-cta" href="#brandbook">Брендбук</a>
 </div>
 </header>
 <main id="top">
@@ -962,7 +962,7 @@ footer{border-top:1px solid rgba(241,218,191,.12)}
 <p class="hero-sub">Презентация готового проекта фирменного стиля: концепция, система визуальных элементов и носители бренда.</p>
 <div class="actions">
 <a class="btn primary" href="#merch">Смотреть мерч</a>
-<a class="btn" href="brandbook.html">Брендбук</a>
+<a class="btn" href="#brandbook">Брендбук</a>
 </div>
 </div>
 <div aria-label="Фирменная символика и мерч" class="hero-visual">
@@ -1142,7 +1142,7 @@ document.addEventListener('keydown',e=>{
 
 
 <script>
-document.querySelectorAll('a[href="brandbook.html"]').forEach(link=>{
+document.querySelectorAll('a[href="#brandbook"]').forEach(link=>{
   link.addEventListener('click',e=>{
     e.preventDefault();
     const target=document.getElementById('brandbook');
