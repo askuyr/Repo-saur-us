@@ -899,6 +899,40 @@ footer{border-top:1px solid rgba(241,218,191,.12)}
   .ticker-track{animation:none}
 }
 
+
+/* Extra motion pack */
+.caption{display:none!important}
+.hero-card,.merch-card,.logo-tile,.principle,.swatch,.brandbook-image-wrap{
+  animation: riseIn .9s cubic-bezier(.2,.8,.2,1) both;
+}
+.hero-card:hover,.merch-card:hover,.logo-tile:hover{
+  transform:translateY(-14px) rotateX(3deg) scale(1.025);
+  filter:drop-shadow(0 35px 45px rgba(0,0,0,.28));
+}
+.merch-card img,.hero-card img,.logo-tile img{
+  transition:transform .8s cubic-bezier(.2,.8,.2,1),filter .5s ease;
+}
+.merch-card:hover img,.hero-card:hover img,.logo-tile:hover img{
+  transform:scale(1.06);
+  filter:brightness(1.04) contrast(1.03);
+}
+.motion-symbol{animation:floatSymbol 7s ease-in-out infinite}
+.motion-symbol.two{animation-delay:-2.5s}
+.hero-symbol{animation:pulseGlow 4s ease-in-out infinite}
+.ticker{animation:tickerGlow 3s ease-in-out infinite}
+@keyframes riseIn{
+ from{opacity:0;transform:translateY(45px) scale(.96)}
+ to{opacity:1;transform:translateY(0) scale(1)}
+}
+@keyframes floatSymbol{
+ 0%,100%{transform:translateY(0) rotate(-1deg)}
+ 50%{transform:translateY(-18px) rotate(1deg)}
+}
+@keyframes pulseGlow{
+ 0%,100%{filter:drop-shadow(0 0 0 transparent)}
+ 50%{filter:drop-shadow(0 20px 35px rgba(146,129,122,.45))}
+}
+@keyframes tickerGlow{50%{letter-spacing:.12em}}
 </style>
 </head>
 <body>
